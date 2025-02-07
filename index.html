@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Valentine's Day</title>
+<style>
+body {
+  background-color: #fce1e1;
+  font-family: sans-serif;
+  text-align: center;
+}
+#message {
+  font-size: 24px;
+  color: #e91e63;
+  margin-top: 20px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out; /* Smooth fade-in */
+}
+button {
+  background-color: #e91e63;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+img {
+  margin-top: 20px; /* Add some space above the image */
+}
+</style>
+</head>
+<body>
+  <h1>Happy Valentine's Day!</h1>
+  <img src="image1.gif" alt="Cute GIF" width="200">
+  <button id="revealButton">Click for a surprise!</button>
+  <div id="message">Will you be my Valentine? ❤️</div>
+
+  <script>
+    const revealButton = document.getElementById("revealButton");
+    const message = document.getElementById("message");
+
+    revealButton.addEventListener("click", () => {
+      message.style.opacity = 1; // Show the message
+      revealButton.style.display = "none"; // Hide the button
+    });
+  </script>
+
+</body>
+</html>
